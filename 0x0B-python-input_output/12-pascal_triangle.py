@@ -1,30 +1,27 @@
 #!/usr/bin/python3
+"""pascal_triangle function documentation"""
+
+
 def pascal_triangle(n):
-    """ Function that returns the pascal triangle
+    """this functions returns a list of lists of integers representing \
+    a pascal triangle
 
     Args:
-        n: number of lines
+        n (int): number of rows of the pascal triangle
 
-    Returns:
-        matrix: a matrix with the pascal triangle
-
+    Return:
+        pascal triangle - a list of lists
     """
 
-    matrix = []
-    prev = []
+    if n <= 0:
+        return ""
 
-    for i in range(n):
-        res_list = []
-        p1 = -1
-        p2 = 0
-        for j in range(len(prev) + 1):
-            if p1 == -1 or p2 == len(prev):
-                res_list += [1]
-            else:
-                res_list += [prev[p1] + prev[p2]]
-            p1 += 1
-            p2 += 1
-        matrix.append(res_list)
-        prev = res_list[:]
-
-    return matrix
+    p_triangle = [[1]]
+    for cur_row in range(1, n):
+        row = [1]
+        r_prev = p_triangle[cur_row - 1]
+        for el in range(1, cur_row):
+            row.append(r_prev[el] + r_prev[el - 1])
+        row.append(1)
+        p_triangle.append(row)
+    return p_triangle
