@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 def reverse_alphabets():
     for i in range(122, 96, -1):
         if i % 2 == 0:
