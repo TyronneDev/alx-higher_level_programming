@@ -4,6 +4,7 @@ if __name__ == "__main__":
 
     sum = 0
     if len(argv) < 2:
+        sum = 0
         print("{}".format(sum))
     else:
         for i in range(1, len(argv)):
