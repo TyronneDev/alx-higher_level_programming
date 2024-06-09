@@ -4,11 +4,8 @@ if __name__ == "__main__":
 
     sum = 0
     if len(argv) - 1 < 1:
-        sum = 0
-        print(sum)
+        print("{}".format(sum))
     else:
-        args = int(argv[1:])
-        sum = 0
-        for i in args:
-            sum += i
-        print(sum)
+        for i in range(1, len(argv)):
+            sum += int(argv[i])
+            print("{}".format(sum))
