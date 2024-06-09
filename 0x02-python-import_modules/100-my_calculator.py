@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     from sys import argv
 
-    import calculator_ as calc
+    import calculator_1 as calc
 
     if len(argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
