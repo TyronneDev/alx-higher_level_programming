@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if len(argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    elif argv[2] not in ('+', '-', '*', '/'):
+    elif argv[2] != '+' and != '-' and != and != '*' and != '/':
         print("Unknown operator. Available operators: +, _, *, and /")
         exit(1)
     else:
