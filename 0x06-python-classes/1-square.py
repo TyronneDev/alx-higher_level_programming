@@ -5,15 +5,17 @@ class Square prints a square
 
 
 class Square:
-    """
-    class Square prints a square
-    """
+    """Defines a class Square
 
+    Attributes:
+        __size (int): length of side of the square
+    """
     def __init__(self, size):
-        """
-        Initialization function
+        """Initialization method
 
         Args:
-        param1: the size of square
+            size (int): length of side of the square
+
+        Return: None
         """
         self.__size = size
